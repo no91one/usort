@@ -1,0 +1,19 @@
+{
+  "name": "usort",
+  "version": "1.0.0",
+  "description": "\"An npm package which will be multifunctional , fast and similar to bebop....!\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/no91one/usort.git"
+  },
+  "author": "Naveen Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/no91one/usort/issues"
+  },
+  "homepage": "https://github.com/no91one/usort#readme"
+}
