@@ -1,16 +1,40 @@
-# Usort
+# usort.js
 
 ---
 
-> It's a multifunctional npm package for using various data structures and algorithms in your project.
+> It's an npm package for testing various sorting algorithms .
 
-### Installation
+## Installation
 
 ```bash
 npm i usort
 ```
 
-## Features
+## How to uSort..!
+
+```javascript
+const usort = require("usort");
+
+var arr = [1, 4, 5, 32, 53, 22, 12];
+
+arr = usort.mergeSort(arr);
+
+console.log(arr);
+
+arr = usort.bubbleSort(arr);
+
+console.log(arr);
+
+arr = usort.quickSort(arr);
+
+console.log(arr);
+
+arr = usort.insertionSort(arr);
+
+console.log(arr);
+```
+
+## Algoritms
 
     * Sorting
         * Bubble Sort
@@ -18,17 +42,6 @@ npm i usort
         * Insertion Sort
         * Merge Sort
 
-    * Maths
-        * GCD
-        * LCM
-        * Square root
-        * Cube root
-        * Exponent
+### Authors
 
-    * Searching Algorithms
-        * Binary Search
-        * Linear Search
-
-    * Graph Algorithms
-        * DFS
-        * BFS
+- Naveen Singh

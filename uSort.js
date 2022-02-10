@@ -15,9 +15,7 @@ function bubbleSort(arr) {
       [arr[j + 1], arr[j]] = [arr[j], arr[j + 1]];
     }
   }
-  for (let j = 0; j < arr.length; j++) {
-    console.log(arr[j]);
-  }
+
   return arr;
 }
 function insertionSort(arr){
@@ -204,3 +202,9 @@ var uSort={
   selectionSort:selectionSort
 }
 module.exports = uSort;
+
+const usort = require('usort');
+
+var arr = [1, 4, 5, 32, 53, 22, 12];
+
+usort.mergeSort(arr);
