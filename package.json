@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/no91one/usort/issues"
   },
-  "homepage": "https://github.com/no91one/usort#readme"
+  "homepage": "https://github.com/no91one/usort#readme",
+  "dependencies": {}
 }
