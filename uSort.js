@@ -1,4 +1,3 @@
-arr = [];
 
 function bubbleSort(arr) {
   let i;
