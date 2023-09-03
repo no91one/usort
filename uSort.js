@@ -111,42 +111,17 @@ function merge(arr1, arr2) {
     return res;
   }
   function mergeSort(arr) {
-
     if (arr.length <= 1) return arr;
-
-    let mid = Math.ceil(arr.length / 2);
-
-    let arr1 = arr.slice(0, mid);
-
-    let arr2 = arr.slice(mid);
-
-    let arr1_subarrays = [],
-      sorted_arr1_subarrays = [];
-
-    let arr2_subarrays = [],
-      sorted_arr2_subarrays = [];
-
-    for (let i = 0; i < arr1.length; i += 2) {
-      arr1_subarrays.push(arr1.slice(i, i + 2));
-    }
-
-    for (let i = 0; i < arr2.length; i += 2) {
-      arr2_subarrays.push(arr2.slice(i, i + 2));
-    }
-
-    for (let i = 0; i < arr1_subarrays.length; i += 2) {
-      let result = merge(arr1_subarrays[i], arr1_subarrays[i + 1]);
-      result.forEach((value) => sorted_arr1_subarrays.push(value));
-    }
-
-    for (let i = 0; i < arr2_subarrays.length; i += 2) {
-      let result = merge(arr2_subarrays[i], arr2_subarrays[i + 1]);
-      result.forEach((value) => sorted_arr2_subarrays.push(value));
-    }
-
-    let result = merge(sorted_arr1_subarrays, sorted_arr2_subarrays);
-
-    return result;
+  
+    const mid = Math.floor(arr.length / 2);
+  
+    const arr1 = arr.slice(0, mid);
+    const arr2 = arr.slice(mid);
+  
+    const sorted_arr1 = mergeSort(arr1);
+    const sorted_arr2 = mergeSort(arr2);
+  
+    return merge(sorted_arr1, sorted_arr2);
   }
   function partition(items, left, right) {
 
@@ -193,12 +168,21 @@ function merge(arr1, arr2) {
 
     return items;
   }
+function executionTime(fn,arr){
+  const start = new Date();
+  fn(arr);
+  const end = new Date();
+  const timeTaken = end-start;
+  return `${timeTaken} ms`;
+}
+
 var uSort={
   bubbleSort: bubbleSort,
   insertionSort: insertionSort,
   mergeSort: mergeSort,
   quickSort: quickSort,
-  selectionSort:selectionSort
+  selectionSort:selectionSort,
+  executionTime:executionTime
 }
 module.exports = uSort;
 
@@ -207,3 +191,4 @@ const usort = require('usort');
 var arr = [1, 4, 5, 32, 53, 22, 12];
 
 usort.mergeSort(arr);
+usort.executionTime(mergeSort,arr);
