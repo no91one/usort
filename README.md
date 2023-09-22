@@ -4,6 +4,8 @@
 
 > It's an npm package for testing various sorting algorithms .
 
+[NPM page](https://www.npmjs.com/package/usort)
+
 ## Installation
 
 ```bash
